@@ -261,7 +261,7 @@ export function Skills() {
                       B.Sc. in Computer Science and Engineering
                     </h4>
                     <span className="text-sm text-green-400 bg-green-500/10 px-3 py-1 rounded-full">
-                      2020 – 2024
+                      2018 – 2023
                     </span>
                   </div>
                   <div className="flex items-center gap-2 text-gray-400 mb-4">
