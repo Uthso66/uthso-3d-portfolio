@@ -214,7 +214,7 @@ export function Projects() {
           </>
         ) : (
           /* 3D View */
-          <div className="h-[500px] w-full rounded-xl overflow-hidden border border-gray-800 bg-gray-900">
+          <div className="h-125 w-full rounded-xl overflow-hidden border border-gray-800 bg-gray-900">
             {mounted && (
               <Canvas
                 camera={{ position: [0, 5, 15], fov: 50 }}
