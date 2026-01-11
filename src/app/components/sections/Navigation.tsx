@@ -7,7 +7,6 @@ const navItems = [
   { label: "Home", href: "#home" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
-  { label: "Achievements", href: "#achievements" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -44,7 +43,15 @@ export function Navigation() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-linear-to-r from-cyan-500 to-blue-500 group-hover:w-full transition-all duration-300" />
               </a>
             ))}
-            <button className="text-sm px-4 py-2 rounded-lg bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+            <button
+              onClick={() => {
+                const contactSection = document.getElementById("contact");
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+              className="text-sm px-4 py-2 rounded-lg bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+            >
               Contact
             </button>
           </div>
@@ -72,7 +79,18 @@ export function Navigation() {
                   {item.label}
                 </a>
               ))}
-              <button className="text-sm px-4 py-2 rounded-lg bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 transition-all mt-2">
+              <button
+                onClick={() => {
+                  setIsOpen(false);
+                  setTimeout(() => {
+                    const contactSection = document.getElementById("contact");
+                    if (contactSection) {
+                      contactSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }, 100);
+                }}
+                className="text-sm px-4 py-2 rounded-lg bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 transition-all mt-2"
+              >
                 Contact Me
               </button>
             </div>

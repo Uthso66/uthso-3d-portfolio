@@ -54,7 +54,6 @@ export function Hero() {
               Frontend Engineer • 3D • AI
             </span>
           </div>
-
           {/* Main heading - ACTUALLY SMALL THIS TIME */}
           <div className="mb-4">
             <h1 className="text-2xl sm:text-3xl font-bold text-gray-100 mb-2">
@@ -69,24 +68,33 @@ export function Hero() {
               <Typewriter phrases={phrases} />
             </div>
           </div>
-
           {/* Description */}
           <p className="text-sm text-gray-400 leading-relaxed mb-6 max-w-lg mx-auto">
             Hybrid Software Engineer specializing in motion-first frontend, 3D
             web systems, and applied AI integration.Samsung R&D QA engineer with
             competitive programming expertise.
           </p>
-
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-3 justify-center mb-8">
-            <button className="px-4 py-2 text-sm rounded-lg border border-gray-700 hover:border-cyan-500 hover:bg-gray-900/50 transition-all duration-300">
+            <button
+              onClick={() => {
+                const projectsSection = document.getElementById("projects");
+                if (projectsSection) {
+                  projectsSection.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+              className="px-4 py-2 text-sm rounded-lg border border-gray-700 hover:border-cyan-500 hover:bg-gray-900/50 transition-all duration-300"
+            >
               View Projects
             </button>
-            <button className="px-4 py-2 text-sm rounded-lg bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+
+            <button
+              onClick={() => window.open("/resume.pdf", "_blank")}
+              className="px-4 py-2 text-sm rounded-lg bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+            >
               Download CV
             </button>
           </div>
-
           {/* Quick stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 max-w-md mx-auto mb-8">
             {[
@@ -106,7 +114,6 @@ export function Hero() {
               </div>
             ))}
           </div>
-
           {/* Scroll indicator */}
           <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
             <div className="animate-bounce">
